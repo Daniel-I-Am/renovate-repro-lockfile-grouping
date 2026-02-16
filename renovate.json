@@ -1,0 +1,26 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "lockFileMaintenance": {
+    "enabled": true,
+    "schedule": [
+      "every weekday"
+    ]
+  },
+  "prConcurrentLimit": 0,
+  "prHourlyLimit": 0,
+  "schedule": [
+      "every weekday"
+  ],
+  "branchPrefix": "renovate-",
+  "packageRules": [
+    {
+      "matchUpdateTypes": ["major", "minor"],
+      "enabled": false
+    },
+    {
+      "matchManagers": ["terraform"],
+      "matchUpdateTypes": ["lockFileMaintenance"],
+      "groupName": "Terraform lockfile maintenance"
+    }
+  ]
+}
